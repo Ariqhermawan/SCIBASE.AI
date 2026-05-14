@@ -35,6 +35,8 @@ npm run demo
 
 The demo loads `demo/sample-paper.json`, runs the full workflow, and prints a compact report with the generated summaries, review diagnostics, and citation recommendations.
 
+Short video demo: [`demo/research-tools-demo.mp4`](demo/research-tools-demo.mp4).
+
 ## Design Notes
 
 - Evidence spans keep generated outputs auditable by pointing back to source text.
