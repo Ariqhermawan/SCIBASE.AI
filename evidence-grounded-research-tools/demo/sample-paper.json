@@ -1,0 +1,25 @@
+{
+  "title": "Evidence-linked notebooks improve reproducibility triage for climate model ensembles",
+  "abstract": "We evaluate a notebook-centered workflow for auditing climate model ensembles across three public datasets. The workflow links model outputs, parameter files, and narrative claims so reviewers can inspect evidence behind reported findings. Across 42 experiments, the linked workflow reduced missing-artifact review notes by 31% and improved reviewer agreement on reproducibility readiness.",
+  "keywords": ["reproducibility", "notebooks", "climate", "evidence", "workflow"],
+  "sections": [
+    {
+      "heading": "Methods",
+      "text": "We analyzed three public climate datasets using reproducible Python notebooks, pinned dependency manifests, and dataset checksums. Each claim in the manuscript was linked to a notebook cell and source artifact."
+    },
+    {
+      "heading": "Results",
+      "text": "The evidence-linked workflow reduced missing-artifact review notes by 31% compared with a baseline repository review. Reviewer agreement increased from 0.62 to 0.78 across reproducibility readiness labels, with p < 0.05."
+    },
+    {
+      "heading": "Limitations",
+      "text": "The study used public datasets and did not include human participants. Data and code are available at https://github.com/example/climate-evidence-notebooks."
+    }
+  ],
+  "references": [
+    {
+      "title": "Improving reproducibility in computational research",
+      "doi": "10.1126/science.abd1705"
+    }
+  ]
+}
