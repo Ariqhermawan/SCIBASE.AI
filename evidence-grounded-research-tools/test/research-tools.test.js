@@ -70,5 +70,6 @@ test("runResearchToolsWorkflow composes the MVP toolchain", () => {
   );
   assert.equal(workflow.citations.length, 2);
   assert.equal(workflow.peerReview.title, sampleDocument.title);
-  assert.ok(workflow.intake.keywordCount !== 0 || workflow.intake.keywords.length > 0);
+  assert.ok(workflow.intake.keywords.length > 0);
+  assert.ok(workflow.intake.sentenceCount > 0);
 });
