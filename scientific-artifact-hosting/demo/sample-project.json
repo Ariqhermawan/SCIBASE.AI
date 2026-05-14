@@ -1,0 +1,32 @@
+{
+  "id": "climate-notebook-reproducibility",
+  "title": "Climate notebook reproducibility package",
+  "description": "A research project package containing datasets, notebooks, scripts, figures, and metadata for reproducing a climate model ensemble audit.",
+  "doi": "10.5555/scibase.climate.2026.001",
+  "license": "CC-BY-4.0",
+  "access": "public",
+  "creators": [
+    { "name": "Ariq Hermawan", "affiliation": "Independent Research Contributor", "orcid": "0000-0000-0000-0000" },
+    { "name": "SCIBASE Demo Lab", "affiliation": "SCIBASE.AI" }
+  ],
+  "keywords": ["climate", "reproducibility", "notebooks", "FAIR", "datasets"],
+  "funding": ["Open reproducibility pilot"],
+  "artifacts": [
+    { "path": "data/raw/temperature-readings.csv", "size": 48210, "checksum": "sha256:raw-temp-001", "rows": 1200, "columns": ["station", "date", "temperature_c"], "version": "v1.0.0", "license": "CC-BY-4.0", "access": "public" },
+    { "path": "data/processed/model-summary.parquet", "size": 98520, "checksum": "sha256:model-summary-001", "rows": 42, "columns": ["model", "scenario", "rmse", "ci_low", "ci_high"], "version": "v1.0.0", "license": "CC-BY-4.0", "access": "public" },
+    { "path": "notebooks/run_analysis.ipynb", "size": 15240, "checksum": "sha256:notebook-001", "version": "v1.0.0", "license": "MIT", "access": "public" },
+    { "path": "code/analysis.py", "size": 6400, "checksum": "sha256:analysis-001", "version": "v1.0.0", "license": "MIT", "access": "public" },
+    { "path": "figures/result-plot.png", "size": 22100, "checksum": "sha256:plot-001", "version": "v1.0.0", "license": "CC-BY-4.0", "access": "public" },
+    { "path": "Dockerfile", "size": 520, "checksum": "sha256:docker-001", "version": "v1.0.0", "license": "MIT", "access": "public" }
+  ],
+  "computeTriggers": [
+    { "name": "Run analysis", "command": "python code/analysis.py", "schedule": "manual" },
+    { "name": "Weekly data refresh", "command": "python code/analysis.py --refresh", "schedule": "weekly" }
+  ],
+  "previousDataset": {
+    "path": "data/raw/temperature-readings.csv",
+    "checksum": "sha256:raw-temp-000",
+    "rows": 1180,
+    "columns": ["station", "date", "temperature_c"]
+  }
+}
